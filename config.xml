@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+	    xmlns:gap = "http://phonegap.com/ns/1.0"
+	           id = "website.sharedsapience.scan4Joy"
+	  versionCode = "1"
+	      version = "1.0.0"> <!-- root element of the config.xml document -->
+
+	<name short="S4Joy">Scan 4 Joy</name> <!-- specifies the app's formal name, as it appears on the device's home screen and within app store interfaces -->
+		<!-- specifies an optional display name for the app.  Sometimes the app name should be displayed differently on device's home screen than on informational and app-store interfaces due to limited space. -->
+	<description> 
+		This app allows the User to decode and encode barcodes. 
+	</description> <!-- specifies metadata that may appear within app-store listings -->
+
+	<author email="chrislarham@outlook.com" href="https://sharedsapience.website/">
+		Chris Larham
+	</author> <!-- specifies contact information that may be displayed within app-store listings -->
+
+	<platform name="android" /> <!-- when using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform.  Use the element to specify configuration that should only appear in a single platform-specific config.xml file -->
+      
+        <preference name="android-minSdkVersion" value="24" />
+        <preference name="android-targetSdkVersion" value="30" /> <!-- by August 2021, all apps must target api level 30 (android 11) -->
+      
+        <content src="index.html" /> <!-- defines the app's starting page in the top-level web assets directory.  The default value is index.html, which customarily appears in a project's top-level www directory. -->
+
+	<access origin="https://sharedsapience.website" /> <!-- defines the set of external domains the app is allowed to communicate with.  The default value shown above (*) allows it to access any server.  See the domain Whitelist Guide for details. -->
+	<allow-navigation href="https://sharedsapience.website/*" /> <!-- controls which URLs the WebView itself can be navigated to.  Applies to top-level navigations only.  See the cordova-plugin-whitelist for details. -->
+	<allow-intent href="https://sharedsapience.website/*" /> <!-- controls which URLs the app is allowed to ask the system to open.  By default, no external URLs are allowed. See the cordova-plugin-whitelist for details. -->
+
+	<plugin name="phonegap-plugin-barcodescanner" source="npm" />
+	<plugin name="cordova-plugin-whitelist" source="npm" /> <!-- specifies details about which plugin to restore during a prepare.  This element is automatically added to a project's config.xml when a plugin is added using the --save flag.  See the CLI reference for more information on adding plugins. -->
+	<plugin name="cordova-plugin-splashscreen" source="npm" />
+
+	<splash platform="android" qualifier="port-ldpi" src="Scan4Joy_Icons_And_Splashes/s4j_ldpi_splash.png" /> <!-- specifies different splash screens for different devices, 200 x 320px -->
+	<splash platform="android" qualifier="land-ldpi" src="Scan4Joy_Icons_And_Splashes/ldpi_landscape.png" /> <!-- 320 x 200px -->
+	<splash platform="android" qualifier="port-mdpi" src="Scan4Joy_Icons_And_Splashes/s4j_mdpi_splash.png" /> <!-- 320 x 480px -->
+	<splash platform="android" qualifier="land-mdpi" src="Scan4Joy_Icons_And_Splashes/mdpi_landscape.png" /> <!-- 480 x 320px -->
+	<splash platform="android" qualifier="port-hdpi" src="Scan4Joy_Icons_And_Splashes/s4j_hdpi_splash.png" /> <!-- 480 x 800px -->
+	<splash platform="android" qualifier="land-hdpi" src="Scan4Joy_Icons_And_Splashes/hdpi_landscape.png" /> <!-- 800 x 480px -->
+	<splash platform="android" qualifier="port-xhdpi" src="Scan4Joy_Icons_And_Splashes/s4j_xhdpi_splash.png" /> <!-- 720 x 1280px -->
+	<splash platform="android" qualifier="land-xhdpi" src="Scan4Joy_Icons_And_Splashes/xhdpi_landscape.png" /> <!-- 1280 x 720px -->
+	<splash platform="android" qualifier="port-xxhdpi" src="Scan4Joy_Icons_And_Splashes/s4j_xxhdpi_splash.png" /> <!-- 960 x 1600px -->
+	<splash platform="android" qualifier="land-xxhdpi" src="Scan4Joy_Icons_And_Splashes/xxhdpi_landscape.png" /> <!-- 1600 x 960px -->
+	<splash platform="android" qualifier="port-xxxhdpi" src="Scan4Joy_Icons_And_Splashes/s4j_xxxhdpi_splash.png" /> <!-- 1280 x 1920px -->
+	<splash platform="android" qualifier="land-xxxhdpi" src="Scan4Joy_Icons_And_Splashes/xxxhdpi_landscape.png" /> <!-- 1920 x 1280px -->
+
+	<splash src="splash.png" /> <!-- default splash screen -->
+
+	<preference name="SplashScreenDelay" value="3250" /> <!-- sets various options as pairs of name/value attributes.  Each preference's name is case-insensitive.  Many preferences are unique to specific platforms, and will be indicated as such. -->
+
+	<icon src="Scan4Joy_Icons_And_Splashes/ldpi_icon.png" width="32" height="32" density="ldpi" /> <!-- specifies icon images for different size devices -->
+	<icon src="Scan4Joy_Icons_And_Splashes/mdpi_icon.png" width="48" height="48" density="mdpi" /> 
+	<icon src="Scan4Joy_Icons_And_Splashes/hdpi_icon.png" width="72" height="72" density="hdpi" /> 
+	<icon src="Scan4Joy_Icons_And_Splashes/xhdpi_icon.png" width="96" height="96" density="xhdpi" /> 
+	<icon src="Scan4Joy_Icons_And_Splashes/xxhdpi_icon.png" width="144" height="144" density="xxhdpi" /> 
+	<icon src="Scan4Joy_Icons_And_Splashes/xxxhdpi_icon.png" width="192" height="192" density="xxxhdpi" /> 
+
+	<icon src="icon.png" /> <!-- default icon -->
+
+</widget>  
